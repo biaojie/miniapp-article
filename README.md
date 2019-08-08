@@ -1,2 +1,2 @@
 # miniapp-article
-article miniapp
+文章购买微信小程序
