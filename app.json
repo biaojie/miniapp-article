@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/personalCenter/personalCenter",
+    "pages/balance/balance",
+    "pages/txRecord/txRecord",
+    "pages/yjIncome/yjIncome",
+    "pages/zcRecord/zcRecord",
+    "pages/shareCommission/shareCommission",
+    "pages/myCollect/myCollect",
+    "pages/classify/classify",
+    "pages/acticleDetails/acticleDetails",
+    "pages/aboutus/aboutus"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00B26A",
+    "navigationBarTitleText": "文章小程序",
+    "navigationBarTextStyle": "#FFF"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#00B26A",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/indexed.png",
+        "iconPath": "images/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/mined.png",
+        "iconPath": "images/mine.png",
+        "pagePath": "pages/personalCenter/personalCenter",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+page{
+  font-size: 32rpx;
+}
+.nohave{
+  width: 100%;
+  text-align: center;
+  margin: 50rpx 0;
+  color: #C6C4C4;
+}
+.nodata{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  color: #bfbfbf;
+}
+.nodata .nodata-n{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.nodata .nodata-n image{
+  width: 140rpx;
+  height: 140rpx;
+  margin: auto;
+}
+.nodata .nodata-n text{
+  margin-top: 30rpx;
+}
+

@@ -1,0 +1,29 @@
+<!--pages/myCollect/myCollect.wxml-->
+ 
+<view wx:if="{{nodata}}" class='nodata'>
+  <view class='nodata-n'>
+    <image src='/images/nodata.png'></image>
+    <text>当前没有记录</text>
+  </view>
+</view>
+
+
+<view class='listall'>
+  <view class='list' wx:for="{{article}}" wx:key data-id='{{item.articleid}}' bindtap='acticleDetails'>
+    <view class='list-img'>
+      <image src='{{url}}{{item.savepath}}{{item.savename}}' mode='aspectFill'></image>
+    </view>
+    <view class='title'>
+      <text>{{item.name}}</text>
+    </view>
+    <view class='abstract'>
+      <text>{{item.spec}}</text>
+    </view>
+    <!-- <view class='price'>
+      <text wx:if="{{item.price == 0 || item.price == 0.00}}" class='free'>免费</text>
+      <text wx:else class='pay'>付费</text>
+    </view> -->
+  </view>
+</view>
+
+<view class='nohave' wx:if="{{nohave}}"><text>到底了~</text></view>

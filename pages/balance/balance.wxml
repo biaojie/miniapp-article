@@ -1,0 +1,79 @@
+<!--pages/balance/balance.wxml-->
+<view class='top'>
+  <view class='price'>
+    <text class='big'>{{userInfo.balance}}</text>元</view>
+  <view class='txian'>
+    <text bindtap='putForward'>提现</text>
+  </view>
+</view>
+
+<view class='list' bindtap='txRecord'>
+  <view class='left-image'>
+    <image src='/images/txrecord.png'></image>
+  </view>
+  <view class='text'>
+    <text>提现记录</text>
+  </view>
+  <view class='right-image'>
+    <image src='/images/right.png'></image>
+  </view>
+</view>
+
+<view class='list' bindtap='yjIncome'>
+  <view class='left-image'>
+    <image src='/images/yjincome.png'></image>
+  </view>
+  <view class='text'>
+    <text>佣金收入</text>
+  </view>
+  <view class='right-image'>
+    <image src='/images/right.png'></image>
+  </view>
+</view>
+
+<view class='list' bindtap='zcRecord'>
+  <view class='left-image'>
+    <image src='/images/zcrecord.png'></image>
+  </view>
+  <view class='text'>
+    <text>支出记录</text>
+  </view>
+  <view class='right-image'>
+    <image src='/images/right.png'></image>
+  </view>
+</view>
+
+<view class='list' bindtap='txIllstrate'>
+  <view class='left-image'>
+    <image src='/images/txIllstrate.png'></image>
+  </view>
+  <view class='text'>
+    <text>提现说明</text>
+  </view>
+  <view class='right-image'>
+    <image src='/images/right.png'></image>
+  </view>
+</view>
+
+<view wx:if="{{txstatus}}">
+  <view class='bg'></view>
+  <view class='bg-tx'>
+    <view class='tx'>
+      <view class='tx-close'>
+        <image src='/images/close.png' bindtap='putForward'></image>
+      </view>
+      <form bindsubmit='putForwardt'>
+        <view class='tx-input'>
+          <input placeholder='请输入提现金额,单位：元' name='price' type='number'></input>
+        </view>
+        <view class='tips'>
+          <image src='/images/tips.png'></image>
+          <text>大于100元才可提现</text>
+        </view>
+        <view class='tx-btn'>
+          <button form-type='submit'>确认</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

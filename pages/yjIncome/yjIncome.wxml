@@ -1,0 +1,32 @@
+<!--pages/yjIncome/yjIncome.wxml-->
+<view wx:if="{{nodata}}" class='nodata'>
+  <view class='nodata-n'>
+    <image src='/images/nodata.png'></image>
+    <text>当前没有记录</text>
+  </view>
+</view>
+
+ <view class='userInfo' wx:for='{{income}}' wx:key >
+  <view class='userAU'>
+    <view class='image'>
+      <image src='{{item.avatarUrl}}'></image>
+    </view>
+  </view>
+  <view class='userNN'>
+    <view class='name'>
+      <text>{{item.nickname}}</text>
+      <text class='time'>{{item.create_time}}</text>
+    </view>
+    <view class='phone'>
+       <text>{{item.name}}</text> 
+    </view>
+    <view class='price'>
+      <view class='payprice'>支付金额：{{item.payprice}}</view>
+      <view class='income'>佣金：{{item.incomeprice}}</view>
+    </view>
+  </view>
+</view> 
+
+<view class='nohave' wx:if="{{nohave}}">
+  <text>到底了~</text>
+</view>

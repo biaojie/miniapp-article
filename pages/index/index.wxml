@@ -1,0 +1,80 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" style="height:{{height+'px'}}">
+  <block wx:for="{{broadcast}}" wx:key="">
+    <swiper-item>
+      <image src='{{url}}{{item}}' class='swiperimg' mode="aspectFill"></image>
+    </swiper-item>
+  </block>
+</swiper> 
+
+<!-- 分类 -->
+<view class='in1' >
+  <view class='in1_1' wx:for="{{sub}}" wx:key="" data-id='{{item.id}}' bindtap='classify'>
+    <view class='in1_1image'>
+      <image src='{{url}}{{item.savepath}}/{{item.savename}}'></image>
+    </view>
+    <view class='in1_1text'>{{item.type_name}}</view>
+  </view>
+</view>
+
+<view class='video' wx:if='{{videoUrl}}'>
+  <video src='{{videoUrl}}'></video>
+</view>
+
+<!--  推荐文章  -->
+<view class='info' >
+  <view class='infoheader'>
+    <view class='ii'><image src='/images/info.png' style='width:40rpx;height:40rpx;margin-right:20rpx;'></image></view>
+    <view class='ii'>推荐文章</view>
+  </view>
+
+  <view class="infos" bindtap='acticleDetails' wx:for="{{article}}" wx:key  data-id='{{item.id}}'>
+    <view class="info-images">
+      <image src="{{url}}{{item.savepath}}/{{item.savename}}" mode="aspectFill"></image>
+    </view>
+    <view class="info-contents">
+      <text class='i_txt'>{{item.name}}</text>
+      <text class='i_cat'>{{item.spec}}</text>
+      <text wx:if="{{item.price == 0 || item.price == 0.00}}" class='free'>免费</text>
+      <text wx:else class='pay'>{{item.price}}元</text>
+    </view>
+  </view>
+
+</view>
+
+<!-- <view class='nohave' wx:if="{{nohave}}"><text>到底了~</text></view> -->
+
+
+<view class='info' >
+  <view class='infoheader'>
+    <view class='ii'><image src='/images/info.png' style='width:40rpx;height:40rpx;margin-right:20rpx;'></image></view>
+    <view class='ii'>关于我们</view>
+  </view>
+
+  <view class="infos" bindtap='acticleDetails' wx:for="{{aboutus}}" wx:key  data-id='{{item.id}}'>
+    <view class="info-images">
+      <image src="{{url}}{{item.savepath}}/{{item.savename}}" mode="aspectFill"></image>
+    </view>
+    <view class="info-contents">
+      <text class='i_txt'>{{item.name}}</text>
+      <text class='i_cat'>{{item.spec}}</text>
+    </view>
+  </view>
+</view>
+
+<view class='list' >
+  <view class='left-image'>
+    <image src='/images/phone.png'></image>
+  </view>
+  <view class='text' bindtap='makePhone'>
+    <text>联系电话：{{cinfo.mphone}}</text>
+  </view>
+</view>
+<view class='list' >
+  <view class='left-image'>
+    <image src='/images/address.png'></image>
+  </view>
+  <view class='text'>
+    <text>公司地址：{{cinfo.address}}</text>
+  </view>
+</view>

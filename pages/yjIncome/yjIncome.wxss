@@ -1,0 +1,54 @@
+/* pages/yjIncome/yjIncome.wxss */
+page{
+  background-color: #f5f5f5;
+}
+.userInfo{
+  width: 100%;
+  display: flex;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  margin-bottom: 15rpx;
+}
+.userInfo .userAU{
+  width: 20%;
+}
+.userInfo .userAU .image image{
+  width: 120rpx;
+  height: 120rpx;
+  overflow:hidden; 
+  display: block;
+  border-radius: 50%;
+  background-color: #FFF;
+}
+.userInfo .userNN{
+  width: 80%;
+}
+.userInfo .userNN .name{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20rpx; 
+}
+.userInfo .userNN .name .time{
+  color: #888;
+  font-size: 30rpx;
+}
+.userInfo .userNN .phone{
+  width: 100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  margin: 0 0 15rpx 0;
+}
+.userInfo .price{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.userInfo .price .payprice{
+  color: #F8A04B;
+}
+.userInfo .price .income{
+  color: #00B26A;
+}

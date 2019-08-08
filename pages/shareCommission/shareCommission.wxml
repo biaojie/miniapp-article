@@ -1,0 +1,8 @@
+<!--pages/shareCommission/shareCommission.wxml-->
+<view class='ewm' bindtap='previmg'>
+  <image src='{{url}}{{qrcode}}'></image>
+</view>
+
+<view class='share'> <button open-type='share'>立即转发</button></view>
+
+<view class='share' bindtap='savePhone'> <button>保存到手机</button></view>

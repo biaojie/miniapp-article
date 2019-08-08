@@ -1,0 +1,66 @@
+
+ <view class='userInfo'>
+  <view class='userAU'>
+    <view class='image'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+    </view>
+  </view>
+  <view class='userNN'>
+    <view class='name'>
+      <button open-type='getUserInfo' bindgetuserinfo='getUserInfo' wx:if="{{!userInfo}}">授权登录</button>
+      <text wx:else>{{userInfo.nickname}}</text>
+    </view>
+    <view class='phone'>
+       <button open-type='getPhoneNumber' bindgetphonenumber='getPhone' wx:if="{{!userInfo.phone}}">授权手机号</button> 
+       <text wx:else>{{userInfo.phone}}</text> 
+    </view>
+  </view>
+</view> 
+
+
+<view class='list' bindtap='balance'>
+  <view class='left-image'>
+    <image src='/images/balance.png'></image>
+  </view>
+  <view class='text'>
+    <text>佣金</text>
+  </view>
+  <view class='right-image'>
+    <text>{{userInfo.balance}}元</text>
+    <image src='/images/right.png'></image>
+  </view>
+</view>
+<view class='list' bindtap='shareCommission'>
+  <view class='left-image'>
+    <image src='/images/share.png'></image>
+  </view>
+  <view class='text'>
+    <text>分享赚佣金</text>
+  </view>
+  <view class='right-image'>
+    <image src='/images/right.png'></image>
+  </view>
+</view>
+<view class='list' bindtap='myCollect'>
+  <view class='left-image'>
+    <image src='/images/collect.png'></image>
+  </view>
+  <view class='text'>
+    <text>我的收藏</text>
+  </view>
+  <view class='right-image'>
+    <image src='/images/right.png'></image>
+  </view>
+</view>
+<view class='list' bindtap='shareFlow'>
+  <view class='left-image'>
+    <image src='/images/flow.png'></image>
+  </view>
+  <view class='text'>
+    <text>分享操作流程</text>
+  </view>
+  <view class='right-image'>
+    <image src='/images/right.png'></image>
+  </view>
+</view>
+

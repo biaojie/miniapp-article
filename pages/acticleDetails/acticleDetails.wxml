@@ -1,0 +1,36 @@
+<!--pages/acticleDetails/acticleDetails.wxml-->
+<import src="/utils/wxParse/wxParse.wxml" />
+
+<view class='info'>
+  <view class='title'>
+    <text>{{article.name}}</text>
+  </view>
+  <view class='time'>
+    <text>作者：{{article.unit}}</text>
+    <text>{{article.create_time}}</text>
+  </view>
+</view>
+
+
+<template is="wxParse" data="{{wxParseData:detail.nodes}}" />
+
+<view wx:if="{{!payrecord}}">
+  <button bindtap='buyArticle'>￥{{article.price}} 确认购买</button>
+</view>
+
+
+<view class='distance'></view>
+
+<view class='bottom'>
+  <view class='service left' bindtap='makePhone'>
+    <image src='/images/service.png'></image>
+    <text>联系客服</text>
+  </view>
+  <view class='service' bindtap='collect'>
+    <image src='/images/{{collectimg}}.png'></image>
+    <text wx:if='{{collectimg == "collect1"}}'>收藏文章</text>
+    <text wx:else>已收藏</text>
+  </view>
+</view>
+
+

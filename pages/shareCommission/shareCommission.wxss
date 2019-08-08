@@ -1,0 +1,20 @@
+/* pages/shareCommission/shareCommission.wxss */
+.ewm{
+  margin: 25rpx auto;
+  width: 500rpx;
+  height: 500rpx;
+}
+.ewm image{
+  width: 100%;
+  height: 100%;
+}
+.share button{
+  width: 90%;
+  font-size: 32rpx;
+  background-color: #00B26A;
+  color: #FFF;
+  margin-top: 50rpx;
+}
+.share button::before{
+  border: none;
+}

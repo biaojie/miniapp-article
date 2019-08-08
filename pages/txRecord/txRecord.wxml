@@ -1,0 +1,25 @@
+<!--pages/txRecord/txRecord.wxml-->
+<view wx:if="{{nodata}}" class='nodata'>
+  <view class='nodata-n'>
+    <image src='/images/nodata.png'></image>
+    <text>当前没有记录</text>
+  </view>
+</view>
+
+<view class='list' wx:for="{{record}}" wx:key>
+  <view class='time'><text>{{item.create_time}}</text></view>
+  <view class='price'>
+    <view>提现金额</view>
+    <view><text class='pprice'>{{item.price}}</text>元</view>
+  </view>
+  <view class='status'>
+    <text wx:if="{{item.status == 0}}" class='ing'>提现中</text>
+    <text wx:if="{{item.status == 1}}" class='success'>提现成功</text>
+    <text wx:if="{{item.status == 2}}" class='fail'>提现失败</text>
+  </view>
+  <view class='remark' wx:if="{{item.status == 2}}">
+    <text>失败原因：{{item.remark}}</text>
+  </view>
+</view>
+
+<view class='nohave' wx:if="{{nohave}}"><text>到底了~</text></view>

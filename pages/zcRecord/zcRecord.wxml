@@ -1,0 +1,29 @@
+<!--pages/zcRecord/zcRecord.wxml-->
+<view wx:if="{{nodata}}" class='nodata'>
+  <view class='nodata-n'>
+    <image src='/images/nodata.png'></image>
+    <text>当前没有记录</text>
+  </view>
+</view>
+
+<view class='list' wx:for="{{record}}" wx:key >
+  <view class='listimg'>
+     <image src='{{url}}{{item.savepath}}/{{item.savename}}' mode="aspectFill"></image> 
+  </view>
+  <view class='listinfo'>
+    <view class='title'>
+      <text>{{item.name}}</text>
+    </view>
+    <view class='time'>
+      <text class='paytime'>{{item.create_time}}</text>
+      <text class='red'>-{{item.price}}</text>
+    </view>
+    <view class='look' bindtap='acticleDetails' data-id='{{item.articleid}}'>
+      <button>查看文章</button>
+    </view>
+  </view>
+</view>
+
+<view class='nohave' wx:if="{{nohave}}">
+  <text>到底了~</text>
+</view>

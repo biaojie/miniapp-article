@@ -1,0 +1,58 @@
+/* pages/zcRecord/zcRecord.wxss */
+page{
+  background-color: #f5f5f5;
+}
+.list{
+  width: 100%;
+  display: flex;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  margin-bottom: 15rpx;
+}
+.list .listimg{
+  width: 38%;
+}
+.list .listimg image{
+  width: 250rpx;
+  height: 150rpx;
+}
+.list .listinfo{
+  width: 62%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.list .listinfo .title{
+  width: 100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.list .listinfo .time{
+  color:#b2b2b2;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15rpx 0;
+}
+.list .listinfo .time .paytime{
+  font-size: 30rpx;
+}
+.list .listinfo .time .red{
+  color: #f50;
+}
+.list .listinfo .look{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.list .listinfo .look button{
+  font-size: 32rpx;
+  color: #00B26A;
+  border: 2rpx solid #00B26A;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  width: 200rpx;
+  line-height: normal;
+}
